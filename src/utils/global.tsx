@@ -1,6 +1,7 @@
-import { Dimensions } from "react-native";
+import { Dimensions, Platform } from "react-native";
 import Toast from "react-native-toast-message";
 
+export const isIos=Platform.OS==='ios'
 export const {height}=Dimensions.get('screen')
 // export const 
 export function generateRandomId(length = 10) {

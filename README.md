@@ -50,11 +50,17 @@ Ensure you have the following installed on your machine:
  ```bash
   git clone https://github.com/AWAIS-514/uptaskecom
 
+
+ ```bash
   cd uptaskecom
 
+ ```bash
   npm install / yarn install
 
+ ```bash
   npx react-native run-android
 
+ ```bash
+  npx react-native run-ios
 
 
