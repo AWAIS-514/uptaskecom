@@ -1,5 +1,8 @@
+import { Dimensions } from "react-native";
 import Toast from "react-native-toast-message";
 
+export const {height}=Dimensions.get('screen')
+// export const 
 export function generateRandomId(length = 10) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
@@ -10,13 +13,10 @@ export function generateRandomId(length = 10) {
   return result;
 }
 export const showSuccess = ({ heading = '', text = '' }) => {
-  Toast.show({ type: 'success', text1: heading, text2: typeof text === 'string' ? text : '', autoHide: true, visibilityTime: 1500,position:'bottom' });
+  Toast.show({ type: 'success', text1: heading, text2: typeof text === 'string' ? text : '', autoHide: true, visibilityTime: 1500,position:'top' });
 };
 
 export const showError = ({ heading = '', text = '' }) => {
-  Toast.show({ type: 'error', text1: heading, text2: typeof text === 'string' ? text : '', autoHide: true, visibilityTime: 1500,position:'bottom' });
+  Toast.show({ type: 'error', text1: heading, text2: typeof text === 'string' ? text : '', autoHide: true, visibilityTime: 1500,position:'top' });
 };
 
-export const showInfo = ({ heading = '', text = '' }) => {
-  Toast.show({ type: 'info', text1: heading, text2: typeof text === 'string' ? text : '', autoHide: true, visibilityTime: 1500,position:'bottom' });
-};
